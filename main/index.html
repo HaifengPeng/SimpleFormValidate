@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<link rel="stylesheet" href="./source/sample.css">
+</head>
+<body>
+	<div class="plusin-info">
+		<h1>SimpleFormValidate 示例</h1>
+		<p></p>
+	</div>
+	<div class="formwarp">
+		<form action="" method="post" id="sample-form">
+			<div class="form-line js-formline">
+				<div><label for="name"><span>*</span>用户名:</label><input type="text" name="name" class="name"></div>
+				<p class="validate-info"></p>
+			</div>
+			<div class="form-line js-formline">
+				<div><label for=""><span>*</span>昵称:</label><input type="text" name="nickname" class="nickname"></div>
+				<p class="validate-info"></p>
+			</div>
+			<div class="form-line js-formline">
+				<div><label for=""><span>*</span>密码:</label><input type="password" name="oldp" class="password"></div>
+				<div class="message validate-info"><p></p></div>
+			</div>
+			<div class="form-line js-formline">
+				<div><label for=""><span>*</span>确认密码:</label><input type="password" name="conp" class="repeatpassword"></div>
+				<div class="message validate-info"><p></p></div>
+			</div>
+			<div class="form-line js-formline">
+				<div><label for=""><span>*</span>手机号:</label><input type="text" name="phone" class="phone"></div>
+				<p class="validate-info"></p>
+			</div>
+			<div class="form-line js-formline">
+				<div><label for=""><span>*</span>电子邮箱:</label><input type="text" name="email" class="email"></div>
+				<div class="message validate-info"><p></p></div>
+			</div>
+			<div class="form-line js-formline">
+				<div><label for="">QQ:</label><input type="text" name="qq" class="no-require qq"></div>
+				<p class="validate-info"></p>
+			</div>
+			<div class="form-line js-formline">
+				<div><label for="">真实姓名:</label><input type="text" name="real" class="no-require realname"></div>
+				<p class="validate-info"></p>
+			</div>
+			<div class="form-line user-submitline">
+				<div><label for=""></label><input type="submit" name="" value="提交" class="subbtn"></div>
+			</div>
+		</form>
+	</div>
+</body>
+<script type="text/javascript" src="./source/jquery.min.js"></script>
+<script type="text/javascript" src="./source/SimpleFormValidate.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$("#sample-form").SimpleFormValidate({password : {rule:/^([\w]){4,}$/,warning:'应为4位以上的数字或字母'}});
+	});
+</script>
+</html>
