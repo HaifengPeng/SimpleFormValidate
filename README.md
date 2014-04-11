@@ -4,7 +4,14 @@ SimpleFormValidate
 a jquery plugin for form validation
 
 
-usage
+##usage
+###basic:
+```
 $("#sample-form").SimpleFormValidate();
-or if you like config the rule like this:
+```
+###or if you like config the rule like this:
+```
 $("#sample-form").SimpleFormValidate({password : {rule:/^([\w]){4,}$/,warning:'应为4位以上的数字或字母'}});
+```
+
+comming soon...
